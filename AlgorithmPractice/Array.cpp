@@ -85,3 +85,63 @@ void LZArray::SelectionSort(int *A, int n){
         }
     }
 }
+
+int Partition(int A[], int left, int right)  // 划分函数
+{
+    int pivot = A[right];               // 这里每次都选择最后一个元素作为基准
+    int tail = left - 1;                // tail为小于基准的子数组最后一个元素的索引
+    for (int i = left; i < right; i++)  // 遍历基准以外的其他元素
+    {
+        if (A[i] <= pivot)              // 把小于等于基准的元素放到前一个子数组末尾
+        {
+            Swap(A, ++tail, i);
+        }
+    }
+    Swap(A, tail + 1, right);           // 最后把基准放到前一个子数组的后边，剩下的子数组既是大于基准的子数组
+    // 该操作很有可能把后面元素的稳定性打乱，所以快速排序是不稳定的排序算法
+    return tail + 1;                    // 返回基准的索引
+}
+
+//QuickSort(A, 0, (sizeof(A) / sizeof(int)) - 1);
+void LZArray::QuickSort(int *A, int left, int right){
+    if (left >= right)
+        return;
+    int pivot_index = Partition(A, left, right); // 基准的索引
+    QuickSort(A, left, pivot_index - 1);
+    QuickSort(A, pivot_index + 1, right);
+}
+
+void Merge(int A[], int left, int mid, int right)// 合并两个已排好序的数组A[left...mid]和A[mid+1...right]
+{
+    int len = right - left + 1;
+    int *temp = new int[len];       // 辅助空间O(n)
+    int index = 0;
+    int i = left;                   // 前一数组的起始元素
+    int j = mid + 1;                // 后一数组的起始元素
+    while (i <= mid && j <= right)
+    {
+        temp[index++] = A[i] <= A[j] ? A[i++] : A[j++];  // 带等号保证归并排序的稳定性
+    }
+    while (i <= mid)
+    {
+        temp[index++] = A[i++];
+    }
+    while (j <= right)
+    {
+        temp[index++] = A[j++];
+    }
+    for (int k = 0; k < len; k++)
+    {
+        A[left++] = temp[k];
+    }
+}
+
+void LZArray::MergeSortRecursion(int *A, int left, int right){
+    
+    if (left == right)    // 当待排序的序列长度为1时，递归开始回溯，进行merge操作
+        return;
+    int mid = (left + right) / 2;
+    MergeSortRecursion(A, left, mid);
+    MergeSortRecursion(A, mid + 1, right);
+    Merge(A, left, mid, right);
+}

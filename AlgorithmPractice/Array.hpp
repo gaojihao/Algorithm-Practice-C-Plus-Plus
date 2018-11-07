@@ -24,6 +24,12 @@ public:
     void BubbleSort(int A[],int const n);
     //选择排序
     void SelectionSort(int A[], int n);
+    
+    //快排
+    void QuickSort(int A[], int left, int right);
+    
+    //递归实现的归并排序(自顶向下)
+    void MergeSortRecursion(int A[], int left, int right);
 };
 
 
