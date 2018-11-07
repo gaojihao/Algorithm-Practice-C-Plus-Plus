@@ -30,3 +30,39 @@ bool LZArray::bFind(int target, vector<vector<int> > array){
     
     return false;
 }
+
+//交换数组中的两个数
+void Swap(int A[], int i, int j)
+{
+    int temp = A[i];
+    A[i] = A[j];
+    A[j] = temp;
+}
+
+
+void LZArray::BubbleSort(int *A, const int n){
+    
+    int left = 0;
+    int right = n-1;
+    
+    while (left < right) {
+        
+        for (int i = left; i < right; i++) {
+            if (A[i] > A[i+1]) {
+                Swap(A, i, i+1);
+            }
+        }
+        
+        right--;
+        
+        for (int i = right; i > left; i--) {
+            
+            if (A[i-1] > A[i]) {
+                Swap(A, i-1, i);
+            }
+        }
+        
+        left++;
+        
+    }
+}

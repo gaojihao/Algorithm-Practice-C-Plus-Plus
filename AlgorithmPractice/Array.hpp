@@ -19,6 +19,9 @@ class LZArray {
 public:
     //二维数组中target,每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序
     bool bFind(int target, vector<vector<int>> array);
+    
+    //冒泡排序
+    void BubbleSort(int A[],int const n);
 };
 
 
