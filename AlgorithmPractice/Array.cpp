@@ -47,7 +47,7 @@ void LZArray::BubbleSort(int *A, const int n){
     
     while (left < right) {
         
-        for (int i = left; i < right; i++) {
+        for (int i = left; i < right; i++) {// 前半轮,将最大元素放到后面
             if (A[i] > A[i+1]) {
                 Swap(A, i, i+1);
             }
@@ -55,7 +55,7 @@ void LZArray::BubbleSort(int *A, const int n){
         
         right--;
         
-        for (int i = right; i > left; i--) {
+        for (int i = right; i > left; i--) {// // 后半轮,将最小元素放到前面
             
             if (A[i-1] > A[i]) {
                 Swap(A, i-1, i);
@@ -64,5 +64,24 @@ void LZArray::BubbleSort(int *A, const int n){
         
         left++;
         
+    }
+}
+
+void LZArray::SelectionSort(int *A, int n){
+    for (int i = 0; i < n - 1; i++){// i为已排序序列的末尾
+        int min = i;
+        
+        for (int j = i + 1; j < n; j++) {
+            
+            if (A[j] < A[min])              //找出未排序序列中的最小值
+            {
+                min = j;
+            }
+            
+            if (min != i)
+            {
+                Swap(A, min, i);    //放到已排序序列的末尾，该操作很有可能把稳定性打乱，所以选择排序是不稳定的排序算法
+            }
+        }
     }
 }

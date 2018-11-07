@@ -22,6 +22,8 @@ public:
     
     //冒泡排序
     void BubbleSort(int A[],int const n);
+    //选择排序
+    void SelectionSort(int A[], int n);
 };
 
 
