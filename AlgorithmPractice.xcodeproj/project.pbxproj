@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9382C97321928D620085AB44 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9382C97221928D620085AB44 /* main.cpp */; };
 		9382C9812192924A0085AB44 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9382C97F2192924A0085AB44 /* Array.cpp */; };
+		93D9956E2194731C000C829E /* Bit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93D9956C2194731C000C829E /* Bit.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		9382C97221928D620085AB44 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9382C97F2192924A0085AB44 /* Array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Array.cpp; sourceTree = "<group>"; };
 		9382C9802192924A0085AB44 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		93D9956C2194731C000C829E /* Bit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bit.cpp; sourceTree = "<group>"; };
+		93D9956D2194731C000C829E /* Bit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bit.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				9382C97221928D620085AB44 /* main.cpp */,
 				9382C97F2192924A0085AB44 /* Array.cpp */,
 				9382C9802192924A0085AB44 /* Array.hpp */,
+				93D9956C2194731C000C829E /* Bit.cpp */,
+				93D9956D2194731C000C829E /* Bit.hpp */,
 			);
 			path = AlgorithmPractice;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D9956E2194731C000C829E /* Bit.cpp in Sources */,
 				9382C97321928D620085AB44 /* main.cpp in Sources */,
 				9382C9812192924A0085AB44 /* Array.cpp in Sources */,
 			);

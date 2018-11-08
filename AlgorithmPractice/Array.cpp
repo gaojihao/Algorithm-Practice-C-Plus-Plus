@@ -98,6 +98,7 @@ int Partition(int A[], int left, int right)  // 划分函数
         }
     }
     Swap(A, tail + 1, right);           // 最后把基准放到前一个子数组的后边，剩下的子数组既是大于基准的子数组
+    
     // 该操作很有可能把后面元素的稳定性打乱，所以快速排序是不稳定的排序算法
     return tail + 1;                    // 返回基准的索引
 }
