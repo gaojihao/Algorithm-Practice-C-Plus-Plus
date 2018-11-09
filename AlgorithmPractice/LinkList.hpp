@@ -11,4 +11,12 @@
 
 #include <stdio.h>
 
+struct LinkList {
+    int value;
+    struct LinkList *next;
+};
+
+LinkList *RecursionReverseList(LinkList* pHead);
+LinkList *StackReverseList(LinkList* pHead);
+
 #endif /* LinkList_hpp */
