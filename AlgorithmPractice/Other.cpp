@@ -13,7 +13,6 @@ int jump1(int n){
     if (n <= 2) {
         return n;
     }
-    
     return jump1(n-1)+jump1(n-2);
 };
 

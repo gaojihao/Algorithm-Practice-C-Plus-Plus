@@ -10,5 +10,17 @@
 #define Tree_hpp
 
 #include <stdio.h>
+#include <vector>
+
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
+
+TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in);
 
 #endif /* Tree_hpp */
