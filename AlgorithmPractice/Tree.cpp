@@ -30,7 +30,7 @@ TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in){
     //利用上述这点，对二叉树节点进行归并
     for (int i = 0; i < gem; i++) {
         left_in.push_back(in[i]);
-        left_in.push_back(pre[i+1]);//前序第一个为根节点
+        left_pre.push_back(pre[i+1]);//前序第一个为根节点
     }
     
     for (int i = gem+1; i < inlen; i++) {
