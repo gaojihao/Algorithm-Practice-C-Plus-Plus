@@ -39,6 +39,5 @@ TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in){
     }
     head->left = reConstructBinaryTree(left_pre, left_in);
     head->right = reConstructBinaryTree(right_pre, right_in);
-    
     return head;
 };
