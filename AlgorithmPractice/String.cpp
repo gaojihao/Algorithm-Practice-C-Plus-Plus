@@ -32,7 +32,7 @@ void replaceSpace(char *str, int length){
     //设置两个指针point1和point2分别指向原字符串和新字符串的末尾位置
     int point1 = oldstringLen - 1, point2 = len - 1;//因为'\0'已经手工加到最后新串的最后一个字符，所以减1
     
-    while (point1 >= 0 && point2 > point1) {//如果point1指向为空格，那么从point2开始赋值“02%”
+    while (point1 >= 0 && point2 > point1) {//如果point1指向为空格，那么从point2开始赋值'02%'
         if (str[point1] == '\0') {
             str[point2--] = '0';
             str[point2--] = '2';
