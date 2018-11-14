@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-//请实现一个函数，将一个字符串中的每个空格替换成“%20”
+//请实现一个函数，将一个字符串中的每个空格替换成'%20'
 
 void replaceSpace(char *str, int length);
 
