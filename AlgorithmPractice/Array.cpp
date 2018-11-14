@@ -146,3 +146,9 @@ void LZArray::MergeSortRecursion(int *A, int left, int right){
     MergeSortRecursion(A, mid + 1, right);
     Merge(A, left, mid, right);
 }
+
+int LZArray::GetNumberOfK(vector<int> data ,int k){
+    
+    
+    return 0;
+}

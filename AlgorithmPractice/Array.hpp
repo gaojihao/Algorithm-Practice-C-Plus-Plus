@@ -30,6 +30,9 @@ public:
     
     //递归实现的归并排序(自顶向下)
     void MergeSortRecursion(int A[], int left, int right);
+    
+    //统计一个数字在排序数组中出现的次数
+    int GetNumberOfK(vector<int> data ,int k);
 };
 
 
