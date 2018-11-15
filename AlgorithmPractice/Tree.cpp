@@ -41,3 +41,17 @@ TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in){
     head->right = reConstructBinaryTree(right_pre, right_in);
     return head;
 };
+
+void Mirror(TreeNode *pRoot){
+    if (pRoot == NULL) {
+        return;
+    }
+    
+    TreeNode *pTemp;
+    pTemp = pRoot->left;
+    pRoot->left = pRoot->right;
+    pRoot->right = pTemp;
+    
+    Mirror(pRoot->left);
+    Mirror(pRoot->right);
+};

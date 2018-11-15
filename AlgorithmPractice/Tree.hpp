@@ -21,6 +21,10 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
 
+//重建二叉树
 TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in);
+
+//操作给定的二叉树，将其变换为源二叉树的镜像
+void Mirror(TreeNode *pRoot);
 
 #endif /* Tree_hpp */
