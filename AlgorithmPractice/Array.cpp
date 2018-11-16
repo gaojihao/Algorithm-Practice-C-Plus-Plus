@@ -152,3 +152,11 @@ int LZArray::GetNumberOfK(vector<int> data ,int k){
     
     return 0;
 }
+
+int LZArray:: RectCover(int n){
+    if (n <= 2){
+        return n;
+    }
+    
+    return RectCover(n-1)+RectCover(n-2);
+}
