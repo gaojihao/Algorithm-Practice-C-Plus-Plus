@@ -2,7 +2,7 @@
 //  Bit.cpp
 //  AlgorithmPractice
 //
-//  Created by 栗志 on 2018/11/8.
+//  Created by lizhi on 2018/11/8.
 //  Copyright © 2018年 com.lizhi1026. All rights reserved.
 //
 
