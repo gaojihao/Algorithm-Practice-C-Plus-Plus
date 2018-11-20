@@ -19,7 +19,7 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-    };
+};
 
 //重建二叉树
 TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in);
