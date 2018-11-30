@@ -36,6 +36,9 @@ public:
     
     //用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
     int RectCover(int n);
+    
+    //一个整型数组里其他的数字都出现了偶数次。找出两个只出现一次的数字
+    void FindNumsAppearOnce(vector<int> data,int* num1,int *num2);
 };
 
 

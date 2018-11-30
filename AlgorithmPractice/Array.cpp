@@ -160,3 +160,44 @@ int LZArray:: RectCover(int n){
     
     return RectCover(n-1)+RectCover(n-2);
 }
+
+bool isBit(int num,int index){
+    num = num >> index;
+    return (num&1);
+};
+
+void LZArray::FindNumsAppearOnce(vector<int> data, int *num1, int *num2){
+    if (data.size() < 2) {
+        return;
+    }
+    
+    unsigned long size = data.size();
+    int tmp = data[0];
+    
+    for (int i = 1; i < size; i++) {
+        tmp = tmp^data[i];
+    }
+    
+    if (tmp == 0) {
+        return;
+    }
+    
+    int index = 0;
+    
+    while ((tmp&1) == 0) {
+        tmp = tmp>>1;
+        ++index;
+    }
+    
+    *num1 = *num2 = 0;
+    
+    for (int j = 0; j < size; j++) {
+        if (isBit(data[j], index)) {
+            *num1 ^= data[j];
+        } else {
+            *num2 ^= data[j];
+        }
+    }
+    
+    
+}
